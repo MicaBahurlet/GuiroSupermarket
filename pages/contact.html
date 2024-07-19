@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos - Guiro Supermercado</title>
+    <title>Contacto - Guiro Supermercado</title>
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
@@ -29,15 +29,27 @@
         <section class="hero">
             <div class="background-container">
                 <div class="overlay">
-                    <h2>NUESTROS PRODUCTOS</h2>
-                    <p>Pedis, pagas y recibis. Sin letras chicas.</p>
+                    <h2>CONTACTATE CON NOSOTROS</h2>
+                    <p>Estamos para ayudarte</p>
                 </div>
             </div>
         </section>
-        <section class="products">
-            <h1>Lista de Productos</h1>
 
-
+        <section class="contact">
+            <h1>Contacto</h1>
+            <form id="contact-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="surname">Apellido:</label>
+                <input type="text" id="surname" name="surname" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="message">Consulta:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
         </section>
     </main>
     <footer>

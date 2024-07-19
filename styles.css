@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: whitesmoke;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0 2rem;
+    
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-container h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    font-size: 1.8rem;
+}
+
+.logo-container img {
+    max-width: 100px;
+    user-select: none;
+    pointer-events: none;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+    
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    
+}
+
+.hero {
+    width: 100%;
+    height: 500px; 
+    position: relative;
+}
+
+.background-container {
+    width: 100%;
+    height: 100%;
+    background-image: url('./data/imgProducts/Hero1.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    background-color: rgba(0, 0, 0, 0.5); 
+    
+}
+
+.overlay h2 {   
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.overlay p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    text-align: start;
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 2rem;
+}
+
+.about p {
+    font-size: 1.2rem;
+}
+.about h4 {
+    font-size: 1.5rem;
+}
+
+.cardsServices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    width: 240px;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.6);
+}
+
+.card img {
+    width: 100px;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.products {
+    padding: 2rem;
+}
+
+
+
+
+
+
+
+.contact {
+    padding: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    width: 100%;
+    bottom: 0;
+    color: white;
+}

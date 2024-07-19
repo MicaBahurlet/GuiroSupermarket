@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guiro Supermercado</title>
     <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./data/imgProducts/Logo2.png" type="image/x-icon">
+    <link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    
 </head>
 <body>
     <header>
         <nav>
             <div class="logo-container">
                 <img src="./data/imgProducts/Logo2.png" alt="Logo de Guiro" class="logo">
-                <h1>Guiro Supermarket</h1>
+                <h1>Güiro Supermarket</h1>
             </div>    
             
             <div class="nav-links">
@@ -29,7 +33,7 @@
         <section class="hero">
             <div class="background-container">
                 <div class="overlay">
-                    <h2>DE LA GÓNDOLA A TU CASA.</h2>
+                    <h2 class="animate__animated animate__bounce">TUS PRODUCTOS A UN CLICK.</h2>
                     <p>Pedis, pagas y recibis. Sin letras chicas.</p>
                 </div>
             </div>
@@ -37,27 +41,42 @@
         <section class="about">
             <h2>¿Quienes somos?</h2>
             <p>Este supermercado Online surgió después de la pandemia, a raíz de que la gente no se sentía segura haciendo sus compras decidimos mudar nuestro supermercado a una plataforma online. </p>
-            <h4>¡Lo bueno es que ahora podes comprar desde la comodidaD de tu hogar!</h4>
+            <h4>¡Lo bueno es que ahora podes comprar desde la comodidad de tu hogar!</h4>
             
         </section>
         <section class="cardsServices">
 
             <div class="cards">
-                <div class="card">
-                    <h3>Explorá nuestros productos</h3>
-                    <img src="./data/imgProducts/Logo1.png" alt="#">
-                </div>  
-                <div class="card">
-                    <h3>30% de descuento en seleccionados</h3>
-                    <img src="./data/imgProducts/Ofertas.png" alt="#" >
-                </div>  
-                <div class="card">
-                    <h3>Contactarte con nosotros</h3>
-                    <img src="./data/imgProducts/Contact.png" alt="#" >
-                </div>    
+                <a href="./pages/products.html">
+                    <div class="card">
+                        <h3>Explorá nuestros productos</h3>
+                        <img src="./data/imgProducts/Logo1.png" alt="#">
+                    </div>  
+                </a>
+                <a href="./pages/productsOff.html">
+                    <div class="card">
+                        <h3>30% de descuento en seleccionados</h3>
+                        <img src="./data/imgProducts/Ofertas.png" alt="#" >
+                    </div>  
+                </a>    
+                <a href="./pages/contact.html">
+                    <div class="card">
+                        <h3>Contactarte con nosotros</h3>
+                        <img src="./data/imgProducts/Contact.png" alt="#" >
+                    </div>  
+                </a>  
 
             </div>
         </section>
+
+        <section class="onlineBuy">
+            <div class = "containerBuyOnline" >
+                <!-- <h3>COMPRA PROTEGIDA - ATENCIÓN ONLINE</h3> -->
+                <img src="./data/imgProducts/Indeximg.jpg" alt="Compra online">
+                
+            </div>
+        </section>
+
     </main>
     <footer>
         <p>&copy; 2024 Guiro Supermarket. Todos los derechos reservados.</p>

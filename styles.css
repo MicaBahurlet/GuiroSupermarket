@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: whitesmoke;
     color: #333;
     margin: 0;
@@ -16,6 +16,7 @@ header {
 
     background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
     box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
 }
 
 nav {
@@ -23,7 +24,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     color: white;
-    padding: 0 2rem;
+    padding: 0 1rem;
     
 }
 
@@ -36,6 +37,8 @@ nav {
 .logo-container h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
     font-size: 1.8rem;
+    pointer-events: none;
+    user-select: none;
 }
 
 .logo-container img {
@@ -58,14 +61,14 @@ nav {
     color: #333;
     font-weight: bold;
     color: white;
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
     
 }
 
 .hero {
     width: 100%;
-    height: 500px; 
+    height: 100vh; 
     position: relative;
 }
 
@@ -95,9 +98,12 @@ nav {
     
 }
 
-.overlay h2 {   
-    font-size: 3rem;
+.overlay h2 {
+    font-size: 4.5rem;
     margin-bottom: 1rem;
+    animation: bounce;
+    animation-duration: 2s;
+    -webkit-animation: bounce;
 }
 
 .overlay p {
@@ -118,19 +124,25 @@ nav {
     padding: 2rem;
     width: 100%;
     height: auto;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    margin-top: 3rem;
 }
 
 .about h2 {
     font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .about p {
     font-size: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 .about h4 {
     font-size: 1.5rem;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .cardsServices {
@@ -143,6 +155,11 @@ nav {
     width: 100%;
     height: auto;
 
+}
+
+.cardsServices a {
+    text-decoration: none;
+    color: #333;
 }
 
 .cards {
@@ -167,16 +184,56 @@ nav {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-image 0.3s ease, color 0.3s ease;
 }
 
 .card:hover {
     box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.6);
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    color: white;
+    transform: scale(1.05);
+
 }
 
 .card img {
     width: 100px;
     border-radius: 10px;
     padding: 0.5rem;
+}
+
+.onlineBuy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+}
+.containerBuyOnline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 3rem;
+}
+
+.containerBuyOnline h3 {
+    font-size: 1.6rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.containerBuyOnline  img {
+    width: 800px;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 
 
@@ -196,14 +253,84 @@ nav {
 }
 
 
-
-
-
-
-
-.contact {
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 2rem;
+    width: 100%;
+    height: auto;
+    max-width: 900px;
+    margin: 0 auto;
 }
+
+.contactFormulario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: flex-start;
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+}
+
+.contactFormulario h1 {
+    margin-left: 2rem;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}   
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    height: auto;   
+    max-width: 800px;
+}
+
+#contact-form input {
+    width: 350px; 
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+#contact-form textarea {
+    width: 350px; 
+    height: 200px;
+    border-radius: 10px;
+    padding: 0.5rem;
+    resize: none;
+    font-family: 'Inter', sans-serif;
+
+}
+
+#contact-form button {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+
+}
+
+#contact-form button:hover {
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.6);
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    font-weight: 900;
+    transform: scale(1.05);
+
+}
+
+.contactImg img {
+    max-width: 600px;
+    border-radius: 15px;
+}
+
 
 footer {
     text-align: center;
@@ -212,4 +339,51 @@ footer {
     width: 100%;
     bottom: 0;
     color: white;
+}
+
+
+.heroPages {
+    width: 100%;
+    height: 50vh; 
+    position: relative;
+}
+
+.background-containerPages {
+    width: 100%;
+    height: 100%;
+    background-image: url('./data/imgProducts/Hero1.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.overlayPages {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    background-color: rgba(0, 0, 0, 0.5); 
+    
+}
+
+.overlayPages h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: bounce;
+    animation-duration: 2s;
+    -webkit-animation: bounce;
+}
+
+.overlayPages p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
 }

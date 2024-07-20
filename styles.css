@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 
 body {
@@ -16,7 +17,7 @@ header {
 
     background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
     box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
-    padding: 1rem;
+
 }
 
 nav {
@@ -31,12 +32,13 @@ nav {
 .logo-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
 }
 
 .logo-container h1 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
-    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    font-size: 1.6rem;
     pointer-events: none;
     user-select: none;
 }
@@ -45,8 +47,8 @@ nav {
     max-width: 100px;
     user-select: none;
     pointer-events: none;
-    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
-    
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
+    -webkit-filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
 }
 
 .nav-links ul {
@@ -62,13 +64,13 @@ nav {
     font-weight: bold;
     color: white;
     font-size: 1.1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     
 }
 
 .hero {
     width: 100%;
-    height: 100vh; 
+    height: 60vh; 
     position: relative;
 }
 
@@ -80,6 +82,8 @@ nav {
     background-position: center; 
     background-repeat: no-repeat; 
     box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    user-select: none;
 }
 
 .overlay {
@@ -101,15 +105,20 @@ nav {
 .overlay h2 {
     font-size: 4.5rem;
     margin-bottom: 1rem;
-    animation: bounce;
+    animation: pulse;
     animation-duration: 2s;
-    -webkit-animation: bounce;
+    /* user-select: none;
+    pointer-events: none;
+    -webkit-animation: pulse; 
+    esto me impedía la animación*/
 }
 
 .overlay p {
     font-size: 1.6rem;
     margin-bottom: 2rem;
     font-weight: 500;
+    user-select: none;
+    pointer-events: none;
 }
 
 
@@ -120,7 +129,6 @@ nav {
     align-items: start;
     justify-content: start;
     text-align: start;
-    gap: 1rem;
     padding: 2rem;
     width: 100%;
     height: auto;
@@ -131,7 +139,7 @@ nav {
 
 .about h2 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .about p {
@@ -142,8 +150,10 @@ nav {
     font-size: 1.5rem;
     text-align: center;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 2rem auto;
 }
+
+
 
 .cardsServices {
     display: flex;
@@ -181,9 +191,9 @@ nav {
     padding: 1rem;
     width: 240px;
     height: 200px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 10px;
-    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-image 0.3s ease, color 0.3s ease;
 }
 
@@ -199,6 +209,8 @@ nav {
     width: 100px;
     border-radius: 10px;
     padding: 0.5rem;
+    pointer-events: none;
+    user-select: none;
 }
 
 .onlineBuy {
@@ -234,6 +246,8 @@ nav {
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+    pointer-events: none;
+    user-select: none;
 }
 
 
@@ -351,7 +365,7 @@ footer {
 .background-containerPages {
     width: 100%;
     height: 100%;
-    background-image: url('./data/imgProducts/Hero1.jpg'); 
+    background-image: url('./data/imgProducts/Hero2.jpg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -380,10 +394,157 @@ footer {
     animation: bounce;
     animation-duration: 2s;
     -webkit-animation: bounce;
+    user-select: none;
+    pointer-events: none;
 }
 
 .overlayPages p {
     font-size: 1.6rem;
     margin-bottom: 2rem;
     font-weight: 500;
+    user-select: none;
+    pointer-events: none;
+}
+
+
+.products {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.products a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+.containerProducts , .containerProductsOff {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.productCard {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.productCard:hover {
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.productCard img {
+    max-width: 100%;
+    height: auto;
+}
+
+.productCard h3 {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.productCard p {
+    font-size: 16px;
+    margin: 4px 0;
+}
+
+.quantityInput {
+    width: 60px;
+    margin: 8px 0;
+    padding: 4px; 
+}
+
+.btnComprarProduct {
+    background-color: #28a745;
+    /*background-color: #f09819;
+    */color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-weight: 500;
+}
+
+.btnComprarProduct:hover {
+    background-color: #218838;
+}
+
+
+
+
+.btnComprarProductOff {
+    background-color: #28a745;
+    /*background-color: #f09819;
+    */color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-weight: 500;
+}
+
+
+.cardOff {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: flex-start;
+    gap: 0.5rem;
+    padding: 1rem 1rem;
+    width: 320px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-image 0.3s ease, color 0.3s ease;
+}
+
+.cardOff:hover {
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.6);
+    color: black;
+    transform: scale(1.05);
+
+}
+
+.cardOff img {
+    width: 130px;
+    border-radius: 10px;
+    padding: 0.5rem;
+    pointer-events: none;
+    user-select: none;
 }

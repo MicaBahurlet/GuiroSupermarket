@@ -1,0 +1,49 @@
+
+// Productos en off
+const containerProductsOff = document.querySelector(".containerProductsOff");
+
+const createProductTemplateOff = (producto) => {
+    return `
+        <div class="productCard">
+            <img src="${producto.img}" alt="${producto.name}">
+            <h3>${producto.name}</h3>
+            <p>$${producto.price}</p>
+            <p>Stock disponible: ${producto.stock}</p>
+            <input type="number" min="0" max="${producto.stock}" value="0" id="quantity-off-${producto.id}" class="quantityInput">
+            <button class="btnComprarProductOff"
+                data-id="${producto.id}"
+                data-name="${producto.name}"
+                data-price="${producto.price}"
+                data-stock="${producto.stock}"
+            >Comprar</button>
+        </div>
+    `;
+};
+
+const renderProductsOff = (productsList) => {
+    containerProductsOff.innerHTML = productsList.map(createProductTemplateOff).join("");
+};
+
+// Renderizo productos al cargar la pag
+renderProductsOff(listaProductsOff);
+
+// Manejar compra con los alerts
+containerProductsOff.addEventListener("click", (e) => {
+    if (e.target.classList.contains("btnComprarProductOff")) {
+        const productId = e.target.dataset.id;
+        const productName = e.target.dataset.name;
+        const productPrice = parseInt(e.target.dataset.price); 
+        const productStock = parseInt(e.target.dataset.stock); 
+        const quantityInput = document.getElementById(`quantity-off-${productId}`);
+        const quantity = parseInt(quantityInput.value);
+
+        if (isNaN(quantity) || quantity <= 0) {
+            alert("Debes seleccionar la cantidad de producto antes de comprar. Aprovechá los descuentos");
+        } else if (quantity > productStock) {
+            alert("Cantidad no válida. Por favor tené en cuenta el stock disponible.");
+        } else {
+            const totalPrice = productPrice * quantity;
+            alert(`Has comprado ${quantity} de ${productName}. El total es $${totalPrice}.`);
+        }
+    }
+});

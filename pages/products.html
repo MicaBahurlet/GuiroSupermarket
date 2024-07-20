@@ -6,6 +6,7 @@
     <title>Productos - Guiro Supermercado</title>
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../data/imgProducts/Logo2.png" type="image/x-icon">
 
 </head>
 <body>
@@ -35,7 +36,17 @@
             </div>
         </section>
         <section class="products">
-            <h1>Lista de Productos</h1>
+            <!-- <h1>Lista de Productos:</h1> -->
+            <a href="../pages/productsOff.html">
+                <div class="cardOff">
+                    <h3>Explorá 30% de descuento en seleccionados</h3>
+                    <img src="../data/imgProducts/Ofertas.png" alt="#" >
+                </div>  
+            </a> 
+
+            <div class="containerProducts"> <!--Acá voy a renderizar los products-->
+
+            </div> 
 
 
         </section>
@@ -43,5 +54,8 @@
     <footer>
         <p>&copy; 2024 Guiro Supermarket. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="../data/productos.js"></script> <!-- Archivo con la lista de productos -->
+    <script src="../main.js"></script>
 </body>
 </html>

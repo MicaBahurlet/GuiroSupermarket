@@ -55,4 +55,5 @@ JS, etc.)
 | `Background Header and Footer`    | `Color`   | background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);     |
 | `Font-family`     | `Font`  | font-family: 'Inter', sans-serif; |
 | `HoverBtns`      | `Hover`    | background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);    |
+| `Btn buy`     | `Color`  | background-color: #28a745; |
 

@@ -33,5 +33,26 @@ const listaProductsOff = [
         price: 3000,
         img: "../data/imgProducts/Off5.png",
         stock: 8
+    },
+    {
+        id: 6,
+        name: "Pepas Fantoche",
+        price: 2000,
+        img: "../data/imgProducts/Off6.png",
+        stock: 12
+    },
+    {
+        id: 7,
+        name: "Café Martinez cookies lemon",
+        price: 5000,
+        img: "../data/imgProducts/Off7.png",
+        stock: 20
+    },
+    {
+        id: 8,
+        name: "Crackers sin tacc",
+        price: 5000,
+        img: "../data/imgProducts/Off8.png",
+        stock: 20
     }
 ]

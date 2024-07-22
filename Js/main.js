@@ -32,8 +32,8 @@ containerProducts.addEventListener("click", (e) => {
         const productName = e.target.dataset.name;
         const productPrice = e.target.dataset.price;
         const productStock = e.target.dataset.stock;
-        const quantityInput = document.getElementById(`quantity-${productId}`);
 
+        const quantityInput = document.getElementById(`quantity-${productId}`);
         const quantity = parseInt(quantityInput.value);
 
         if (isNaN(quantity) || quantity <= 0) {

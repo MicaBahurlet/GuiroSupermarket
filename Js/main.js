@@ -33,6 +33,7 @@ containerProducts.addEventListener("click", (e) => {
         const productPrice = e.target.dataset.price;
         const productStock = e.target.dataset.stock;
         const quantityInput = document.getElementById(`quantity-${productId}`);
+
         const quantity = parseInt(quantityInput.value);
 
         if (isNaN(quantity) || quantity <= 0) {
@@ -41,7 +42,7 @@ containerProducts.addEventListener("click", (e) => {
             alert("Cantidad no válida. Por favor tené en cuenta el stock disponible.");
         } else {
             const totalPrice = productPrice * quantity;
-            alert(`Has comprado ${quantity} de ${productName}. El total es $${totalPrice}.`);
+            alert(`Excelente, compraste ${quantity} de ${productName}. El total es $${totalPrice}.`);
         }
     }
 });

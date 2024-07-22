@@ -35,6 +35,7 @@ containerProductsOff.addEventListener("click", (e) => {
         const productPrice = parseInt(e.target.dataset.price); 
         const productStock = parseInt(e.target.dataset.stock); 
         const quantityInput = document.getElementById(`quantity-off-${productId}`);
+        
         const quantity = parseInt(quantityInput.value);
 
         if (isNaN(quantity) || quantity <= 0) {

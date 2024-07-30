@@ -1,28 +1,28 @@
 const listaProducts = [
     {
         id: 1,
-        name: "Harina 500kg",
+        name: "Harina Chacabuco 500kg",
         price: 4000,
         img: "../data/imgProducts/Harina.png",
         stock: 10
     },
     {
         id: 2,
-        name: "Aceite Oliva",
+        name: "Aceite Oliva Lira",
         price: 3000,
         img: "../data/imgProducts/Aceite.png",
         stock: 15
     },
     {
         id: 3,
-        name: "Leche",
+        name: "Leche Ilolay",
         price: 2000,
         img: "../data/imgProducts/Leche.png",
         stock: 20
     },
     {
         id: 4,
-        name: "Papel Higienico x80mts",
+        name: "Papel Higienico x80mts  Higienol",
         price: 5000,
         img: "../data/imgProducts/Papel.png",
         stock: 5
